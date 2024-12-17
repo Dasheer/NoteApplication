@@ -1,6 +1,9 @@
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.android)
+  id ("kotlin-parcelize")
+  id("com.google.devtools.ksp")
+  id ("androidx.navigation.safeargs")
 }
 
 android {
@@ -30,6 +33,9 @@ android {
   kotlinOptions {
     jvmTarget = "11"
   }
+  buildFeatures {
+    viewBinding = true
+  }
 }
 
 dependencies {
@@ -42,4 +48,19 @@ dependencies {
   testImplementation(libs.junit)
   androidTestImplementation(libs.androidx.junit)
   androidTestImplementation(libs.androidx.espresso.core)
+
+  implementation(libs.room)
+  implementation(libs.roomRuntime)
+  ksp(libs.roomCompiler)
+
+  implementation(libs.lifecycle)
+  ksp(libs.lifecycleCompiler)
+  implementation(libs.liveData)
+  implementation(libs.viewModel)
+
+  implementation(libs.navigationFragment)
+  implementation(libs.navigationUI)
+
+  implementation(libs.coroutines)
+
 }
