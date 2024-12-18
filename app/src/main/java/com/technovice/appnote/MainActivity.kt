@@ -10,7 +10,7 @@ import com.technovice.appnote.viewmodel.NoteViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
-  private lateinit var noteViewModel: NoteViewModel
+  lateinit var noteViewModel: NoteViewModel
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)

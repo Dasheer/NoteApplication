@@ -38,6 +38,7 @@ android {
     //noinspection DataBindingWithoutKapt
     dataBinding = true
   }
+
 }
 
 dependencies {
