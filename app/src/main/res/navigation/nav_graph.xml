@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/addFragment"
         android:name="com.technovice.appnote.fragment.AddFragment"
-        android:label="AddFragment" >
+        android:label="AddFragment">
         <action
             android:id="@+id/action_addFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -15,7 +15,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.technovice.appnote.fragment.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="HomeFragment">
         <action
             android:id="@+id/action_homeFragment_to_addFragment"
             app:destination="@id/addFragment" />
@@ -26,9 +26,14 @@
     <fragment
         android:id="@+id/editFragment"
         android:name="com.technovice.appnote.fragment.EditFragment"
-        android:label="EditFragment" >
+        android:label="EditFragment">
         <action
             android:id="@+id/action_editFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+
+        <argument
+            android:name="note"
+            app:argType="com.technovice.appnote.model.Note"
+            app:nullable="true" />
     </fragment>
 </navigation>
