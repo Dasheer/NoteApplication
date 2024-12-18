@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/noteDesc"
+                android:id="@+id/noteDescription"
                 android:layout_marginTop="8dp"
                 android:maxHeight="170dp"
                 android:text="@string/description"
